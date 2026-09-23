@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://7opotv341v0p"]
+
+[ext_resource type="Script" uid="uid://bvestci4rpa5e" path="res://credit.gd" id="1_7q1b3"]
+[ext_resource type="Texture2D" uid="uid://bcremumyp8qqg" path="res://img/BCOPCE.png" id="2_5wfih"]
+[ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="3_5wfih"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2l348"]
+
+[node name="Node2D" type="Node2D" unique_id=1929245606]
+script = ExtResource("1_7q1b3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1477457057]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_5wfih")
+expand_mode = 1
+
+[node name="button manager" type="Control" parent="TextureRect" unique_id=1384902265]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="back" type="Button" parent="TextureRect/button manager" unique_id=186107746]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 182.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("3_5wfih")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxLine_2l348")
+text = "<     back"

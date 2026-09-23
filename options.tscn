@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://dcdg8jxpw7673"]
+
+[ext_resource type="Script" uid="uid://s4ljr0v15rvf" path="res://options.gd" id="1_ao2gm"]
+[ext_resource type="Texture2D" uid="uid://bcremumyp8qqg" path="res://img/BCOPCE.png" id="2_07a1d"]
+[ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="2_ao2gm"]
+[ext_resource type="Texture2D" uid="uid://cjol6a8jq4xkh" path="res://img/mz.png" id="3_07a1d"]
+[ext_resource type="Texture2D" uid="uid://dljy6owb45trr" path="res://img/df.png" id="4_0kfld"]
+[ext_resource type="Texture2D" uid="uid://b03ddtsh17ufl" path="res://img/blums.png" id="6_w5qgn"]
+[ext_resource type="Texture2D" uid="uid://da0v37s64pnuc" path="res://img/ma.png" id="7_vmi34"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_35jqb"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_07a1d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2h6t2"]
+texture = ExtResource("7_vmi34")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cpdgp"]
+texture = ExtResource("7_vmi34")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmq45"]
+texture = ExtResource("7_vmi34")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mr7ve"]
+texture = ExtResource("7_vmi34")
+
+[node name="options" type="Node2D" unique_id=1546394154]
+script = ExtResource("1_ao2gm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1184389171]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_07a1d")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=601307750]
+layout_mode = 0
+offset_top = -74.0
+offset_right = 1152.0
+offset_bottom = 614.0
+texture = ExtResource("3_07a1d")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect" unique_id=1292453674]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 175.0
+offset_right = 540.0
+offset_bottom = 252.0
+texture = ExtResource("4_0kfld")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="." unique_id=377878205]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TitleLabel" type="Label" parent="Control" unique_id=1283520248]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 94.0
+offset_right = 331.0
+offset_bottom = 159.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.08684368, 0.2061415, 0.33857396, 1)
+theme_override_fonts/font = ExtResource("2_ao2gm")
+theme_override_font_sizes/font_size = 53
+text = "OPTIONS."
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="Control" unique_id=941385960]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 183.0
+offset_right = 257.0
+offset_bottom = 222.0
+size_flags_horizontal = 0
+text = "Play"
+icon = SubResource("MeshTexture_35jqb")
+
+[node name="Stop" type="Button" parent="Control" unique_id=1473052321]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 182.0
+offset_right = 421.0
+offset_bottom = 224.0
+text = "Stop"
+
+[node name="VolumeBox" type="HBoxContainer" parent="Control" unique_id=612224743]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 230.0
+offset_right = 1064.0
+offset_bottom = 253.0
+
+[node name="VolumeSlider" type="HSlider" parent="Control" unique_id=1655313132]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 230.0
+offset_right = 421.0
+offset_bottom = 248.0
+theme_override_icons/grabber = ExtResource("4_0kfld")
+theme_override_icons/tick = ExtResource("6_w5qgn")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="VolumeLabel" type="Label" parent="Control" unique_id=1112356373]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 153.0
+offset_right = 232.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ao2gm")
+theme_override_font_sizes/font_size = 25
+text = "VOLUME"
+autowrap_mode = 1
+
+[node name="back" type="Button" parent="Control" unique_id=913366122]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 182.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("2_ao2gm")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxLine_07a1d")
+text = "<     back"
+
+[node name="StopSFX" type="Button" parent="Control" unique_id=1333360688]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 296.0
+offset_right = 422.0
+offset_bottom = 336.0
+text = "Stop"
+
+[node name="PlaySFX" type="Button" parent="Control" unique_id=629326603]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 297.0
+offset_right = 258.0
+offset_bottom = 336.0
+size_flags_horizontal = 0
+text = "Play"
+icon = SubResource("MeshTexture_35jqb")
+
+[node name="SfxLabel" type="Label" parent="Control" unique_id=830083084]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 261.0
+offset_right = 236.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ao2gm")
+theme_override_font_sizes/font_size = 25
+text = "SFX"
+autowrap_mode = 1
+
+[node name="SfxSlider" type="HSlider" parent="Control" unique_id=1352872929]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 348.0
+offset_right = 426.0
+offset_bottom = 366.0
+theme_override_icons/grabber = ExtResource("4_0kfld")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="w" type="Button" parent="Control" unique_id=1846935431]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 394.0
+offset_right = 197.0
+offset_bottom = 434.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2h6t2")
+text = "w
+"
+
+[node name="S" type="Button" parent="Control/w" unique_id=216264225]
+layout_mode = 0
+offset_top = 38.0
+offset_right = 45.0
+offset_bottom = 78.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_cpdgp")
+text = "S
+
+
+"
+
+[node name="D" type="Button" parent="Control/w" unique_id=531288828]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 22.0
+offset_right = 85.0
+offset_bottom = 62.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_rmq45")
+text = "D
+"
+
+[node name="A" type="Button" parent="Control/w" unique_id=1760493822]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 23.0
+offset_right = 6.0
+offset_bottom = 63.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_mr7ve")
+text = "A
+
+"
+
+[node name="WASD" type="Label" parent="Control" unique_id=1987896546]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 381.0
+offset_right = 576.0
+offset_bottom = 561.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ao2gm")
+theme_override_font_sizes/font_size = 20
+text = "W: Untuk bergerak Maju
+A: Bergerak ke Kiri
+S: Untuk bergerak Mundur
+D: Bergerak ke Kanan"
+autowrap_mode = 1
+
+[connection signal="value_changed" from="Control/VolumeSlider" to="." method="_on_volume_slider_value_changed"]

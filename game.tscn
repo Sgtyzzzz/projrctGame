@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://byjy4ft7qper2"]
+
+[ext_resource type="Script" uid="uid://bd1uhsv7akekg" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="Texture2D" uid="uid://bcremumyp8qqg" path="res://img/BCOPCE.png" id="2_fc0e3"]
+[ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://b8lucg6q1xuoj" path="res://img/Cuplikan layar 2026-09-23 083359.png" id="3_7jktm"]
+[ext_resource type="PackedScene" uid="uid://blroqw6l7cmkd" path="res://dialogue.tscn" id="4_fc0e3"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2h6t2"]
+
+[sub_resource type="GDScript" id="GDScript_e2o6t"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="game" type="Node2D" unique_id=2050543253]
+script = ExtResource("1_feb5d")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=463043701]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_fc0e3")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=388991579]
+offset_top = 68.0
+offset_right = 1152.0
+offset_bottom = 585.0
+texture = ExtResource("3_7jktm")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="." unique_id=1457596677]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="back" type="Button" parent="Control" unique_id=322621306]
+layout_mode = 0
+offset_left = -37.0
+offset_right = 140.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("2_feb5d")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxLine_2h6t2")
+text = "<"
+script = SubResource("GDScript_e2o6t")
+
+[node name="IntroSetup" type="Control" parent="." unique_id=281238251]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dialogue" parent="IntroSetup" unique_id=1687021822 instance=ExtResource("4_fc0e3")]
