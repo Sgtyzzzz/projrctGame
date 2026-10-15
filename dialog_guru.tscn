@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://5fmp7koxu5w7"]
+
+[ext_resource type="Script" uid="uid://d0j222700ftil" path="res://DialogGuru.gd" id="1_eljhy"]
+[ext_resource type="Texture2D" uid="uid://dtt2h60xd3us3" path="res://img/guru.png" id="1_ne88x"]
+[ext_resource type="Texture2D" uid="uid://c4wmljmbh8ccd" path="res://img/dialogue.png" id="2_eljhy"]
+[ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="3_6pocq"]
+
+[node name="Dialog_guru" type="CanvasLayer" unique_id=1774246267]
+script = ExtResource("1_eljhy")
+d_file = "res://dialogues/json/aksa.json"
+
+[node name="Guru" type="TextureRect" parent="." unique_id=981214307]
+offset_left = 58.0
+offset_top = 17.0
+offset_right = 435.0
+offset_bottom = 628.0
+texture = ExtResource("1_ne88x")
+expand_mode = 1
+
+[node name="NPCR" type="NinePatchRect" parent="." unique_id=591505673]
+offset_left = -2.0
+offset_top = 139.0
+offset_right = 1152.0
+offset_bottom = 791.0
+pivot_offset = Vector2(560, 550)
+texture = ExtResource("2_eljhy")
+metadata/_edit_use_anchors_ = true
+
+[node name="G_Name" type="RichTextLabel" parent="NPCR" unique_id=313860781]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 307.0
+offset_right = 343.0
+offset_bottom = 353.0
+theme_override_colors/default_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+theme_override_fonts/normal_font = ExtResource("3_6pocq")
+theme_override_font_sizes/normal_font_size = 31
+text = "name"
+metadata/_edit_use_anchors_ = true
+
+[node name="G_Chat" type="RichTextLabel" parent="NPCR" unique_id=130397698]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 344.0
+offset_right = 1029.0
+offset_bottom = 446.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_6pocq")
+theme_override_font_sizes/normal_font_size = 26
+text = "Chatting..."
+metadata/_edit_use_anchors_ = true
+
+[node name="G_NameInput" type="LineEdit" parent="NPCR" unique_id=336851995]
+visible = false
+layout_mode = 0
+offset_left = 462.0
+offset_top = 375.0
+offset_right = 695.0
+offset_bottom = 437.0
+theme_override_font_sizes/font_size = 20
+text = "Nama"
+alignment = 1
+max_length = 13
+
+[node name="T" type="Timer" parent="." unique_id=1663833371]

@@ -1,0 +1,13 @@
+[
+	{"name": "???", "text": "."},
+	{"name": "???", "text": ".."},
+	{"name": "???", "text": "..."},
+	{"name": "???", "text": "???"},
+	{"name": "???", "text": "ya?"},
+	{"name": "???", "text": "Kamu pasti anak baru ya di sekolah Doesat?"},
+	{"name": "???", "text": "ya.. saya aksana guru seni budaya"},
+	{"name": "Aksana", "text": "oh ya saya sampe kelupaan"},
+	{"name": "Aksana", "text": "nama kamu siapa nak?", "ask_name": true},
+	{"name": "Aksana", "text": "oke, [PLAYER]!"},
+	{"name": "Aksana", "text": "Silahkan duduk dimana saja."}
+]
