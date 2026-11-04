@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bdcc0xw23oamx"]
+
+[ext_resource type="Script" uid="uid://de108nne4ia1a" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://cy3eu8wanhqfs" path="res://img/BC.png" id="2_7vrkn"]
+[ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="3_jix8l"]
+[ext_resource type="Texture2D" uid="uid://c63yjjuhspuw6" path="res://img/ButtonBC.png" id="4_glbon"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe12f"]
+texture = ExtResource("4_glbon")
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("4_glbon")
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nlkkf"]
+load_path = "res://.godot/imported/ButtonBC.png-3dd1cd0a62df321c91395d850f9fa581.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+texture = SubResource("CompressedTexture2D_nlkkf")
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjhsf"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Main menu" type="Node2D" unique_id=53736685]
+script = ExtResource("1_06t4h")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1459481820]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_7vrkn")
+expand_mode = 1
+
+[node name="button manager" type="Control" parent="." unique_id=1502441036]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Start" type="Button" parent="button manager" unique_id=784841568]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 304.0
+offset_right = 285.0
+offset_bottom = 359.0
+theme_override_colors/font_color = Color(0.09704503, 0.24101537, 0.28805593, 1)
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_qe12f")
+text = "New game"
+
+[node name="Start2" type="Button" parent="button manager" unique_id=1650214790]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 228.0
+offset_right = 286.0
+offset_bottom = 283.0
+theme_override_colors/font_color = Color(0.09704503, 0.24101537, 0.28805593, 1)
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_qe12f")
+text = "load game"
+
+[node name="Options" type="Button" parent="button manager" unique_id=608251414]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 386.0
+offset_right = 284.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0.09803922, 0.23921569, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_nlkkf")
+text = "Options"
+
+[node name="Quit" type="Button" parent="button manager" unique_id=1401212301]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 460.0
+offset_right = 282.0
+offset_bottom = 515.0
+theme_override_colors/font_color = Color(0.09803922, 0.23921569, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbon")
+text = "Quit"
+
+[node name="Credit" type="Button" parent="button manager" unique_id=2100498676]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 596.0
+offset_right = 1141.0
+offset_bottom = 651.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_hjhsf")
+text = "Credit"
+
+[connection signal="pressed" from="button manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button manager/Start2" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="button manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="button manager/Credit" to="." method="_on_credit_pressed"]

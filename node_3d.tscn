@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://ce6d26nfyh3dg"]
+
+[ext_resource type="Script" uid="uid://cassv63gdb13m" path="res://character_body_3d.gd" id="1_a202f"]
+[ext_resource type="Script" uid="uid://b38vww5o2pv5g" path="res://day_night_cycle..gd" id="1_noarx"]
+[ext_resource type="Texture2D" uid="uid://c10lxvqyt70pv" path="res://asett/tree_texture.png" id="2_3v7ru"]
+[ext_resource type="PackedScene" uid="uid://duay0m07cdrf" path="res://asett/classroom by Jonathan Granskog - 2BTjD6QAdt.glb" id="3_a0tk4"]
+[ext_resource type="PackedScene" uid="uid://c2gdc4t0tws2v" path="res://asett/Teacher by jeremy - 5v5j_lqOHTO.glb" id="4_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://42bvtcq55fsl" path="res://asett/Backpack by J-Toastie - uRRsiIZKHG.glb" id="5_jka67"]
+[ext_resource type="Script" uid="uid://ci1k80p8ap4hj" path="res://asett/teacher_by_jeremy___5v_5j_lq_ohto.gd" id="6_cdqbm"]
+[ext_resource type="PackedScene" uid="uid://c7p81d4qeh010" path="res://HUd.tscn" id="6_i5arm"]
+[ext_resource type="PackedScene" uid="uid://blroqw6l7cmkd" path="res://dialogue.tscn" id="7_wc5p8"]
+[ext_resource type="PackedScene" uid="uid://dcx6p8fbqwi4s" path="res://asett/Two story house by Kenney - hmXhiLDf8D.glb" id="8_jsk3o"]
+[ext_resource type="PackedScene" uid="uid://b3uk7rc7wvcsl" path="res://asett/Tree by ParfaitUwU - MSuchZNT2G.glb" id="10_cdqbm"]
+[ext_resource type="PackedScene" uid="uid://b8f63jdtfevg5" path="res://asett/Cross walk by Quaternius - 9zxw2NmVI6.glb" id="11_imku0"]
+[ext_resource type="PackedScene" uid="uid://dx2hp8jggwhwr" path="res://asett/Astronaut by Quaternius - 3hC2i0CTuO.glb" id="13_imku0"]
+[ext_resource type="Script" uid="uid://bmxcvmbixrgk" path="res://patrol_follow.gd" id="14_wlxy5"]
+[ext_resource type="ArrayMesh" uid="uid://dr0ilj5de5l8f" path="res://asett/House.obj" id="15_tcnuu"]
+[ext_resource type="Script" uid="uid://c0uiulvk6vb4b" path="res://asett/astronaut_by_quaternius___3h_c_2i_0c_tu_o.gd" id="15_tuemg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tuemg"]
+albedo_texture = ExtResource("2_3v7ru")
+
+[sub_resource type="BoxMesh" id="BoxMesh_yj7wk"]
+size = Vector3(3000, 1, 3000)
+
+[sub_resource type="MeshTexture" id="MeshTexture_noarx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px0t4"]
+albedo_color = Color(0.3019608, 0.54509807, 0.19215687, 1)
+albedo_texture = SubResource("MeshTexture_noarx")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j4s1s"]
+size = Vector3(3000, 0.001, 3000)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_uetg2"]
+radius = 0.33251953
+height = 1.774292
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j4s1s"]
+radius = 0.4272461
+height = 1.8070679
+
+[sub_resource type="Environment" id="Environment_orjwf"]
+ambient_light_energy = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_uetg2"]
+size = Vector3(9.529763, 0.47217968, 6.3056183)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uetg2"]
+size = Vector3(9.075821, 0.001, 6.3580475)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uetg2"]
+height = 13.573303
+radius = 3.1069336
+
+[sub_resource type="Curve3D" id="Curve3D_wlxy5"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.6019783, -0.41612983, -0.56391907, 0, 0, 0, 0, 0, 0, -1.4462681, -0.41612983, 17.399897),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uetg2"]
+height = 2.2802734
+
+[node name="Node3D" type="Node3D" unique_id=152085731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3415753, 0)
+script = ExtResource("1_noarx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1836337964]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1486583701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013685226, -0.22241232, -0.027188301)
+material_override = SubResource("StandardMaterial3D_tuemg")
+mesh = SubResource("BoxMesh_yj7wk")
+surface_material_override/0 = SubResource("StandardMaterial3D_px0t4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=22973589]
+shape = SubResource("BoxShape3D_j4s1s")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1145372225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.0506432, 0)
+script = ExtResource("1_a202f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=441125314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09612048, 0)
+mesh = SubResource("CapsuleMesh_uetg2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1282638299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023632288, -0.6411977, -6.994605e-05)
+shape = SubResource("CapsuleShape3D_j4s1s")
+
+[node name="FirstPersonCamera" type="Camera3D" parent="CharacterBody3D" unique_id=327024078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8401486, 0)
+
+[node name="Flashlight" type="SpotLight3D" parent="CharacterBody3D/FirstPersonCamera" unique_id=205661032]
+
+[node name="ThirdPersonCamera" type="Camera3D" parent="CharacterBody3D" unique_id=2120473248]
+
+[node name="ShaderGlobalsOverride" type="ShaderGlobalsOverride" parent="." unique_id=1795596906]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=732150603]
+environment = SubResource("Environment_orjwf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1683251061]
+transform = Transform3D(1, 0, 0, 0, 0.15494865, 0.98792255, 0, -0.98792255, 0.15494865, 0, 26.997719, 0)
+light_energy = 0.495
+
+[node name="classroom by Jonathan Granskog - 2BTjD6QAdt" parent="." unique_id=66647589 instance=ExtResource("3_a0tk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.272238, 2.0478468, 15.506293)
+
+[node name="tembok1" type="MeshInstance3D" parent="classroom by Jonathan Granskog - 2BTjD6QAdt" unique_id=2025761256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25419998, 1.519826, 0.23556423)
+mesh = SubResource("BoxMesh_uetg2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="classroom by Jonathan Granskog - 2BTjD6QAdt/tembok1" unique_id=158732500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08092499, -0.05507207, 0.10234833)
+shape = SubResource("BoxShape3D_uetg2")
+
+[node name="Teacher by jeremy - 5v5j_lqOHTO" parent="." unique_id=1908721474 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -4.088813, 0.51964134, 14.574176)
+script = ExtResource("6_cdqbm")
+dialogue_file = "res://dialogues/guru_intro.json"
+
+[node name="Area3D" type="Area3D" parent="Teacher by jeremy - 5v5j_lqOHTO" unique_id=1788450422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4771042, 6.1855173, -5.5818024)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Teacher by jeremy - 5v5j_lqOHTO/Area3D" unique_id=1279073179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.137886, 0.635407, 4.7537994)
+shape = SubResource("CylinderShape3D_uetg2")
+
+[node name="Backpack by J-Toastie - uRRsiIZKHG" parent="." unique_id=456217704 instance=ExtResource("5_jka67")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -10.454416, 0.83817995, 17.502787)
+
+[node name="HUd" parent="." unique_id=1967085466 instance=ExtResource("6_i5arm")]
+
+[node name="Dialogue" parent="." unique_id=1687021822 instance=ExtResource("7_wc5p8")]
+visible = false
+
+[node name="rumah" type="Node3D" parent="." unique_id=453415602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107367754, -817.8877)
+
+[node name="Root Scene" parent="." unique_id=609839426 instance=ExtResource("8_jsk3o")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.52, 0.26486278, -17.664)
+
+[node name="Root Scene2" parent="." unique_id=2087842450 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.932645, 0.6230662, -23.9848)
+
+[node name="Root Scene3" parent="." unique_id=2073686965 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.957756, 0.6230664, -5.555684)
+
+[node name="Root Scene4" parent="." unique_id=1142151000 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.261627, 0.6230663, 15.650257)
+
+[node name="Root Scene5" parent="." unique_id=1567030804 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2057266, 0.6230662, -17.458052)
+
+[node name="Root Scene6" parent="." unique_id=1204511381 instance=ExtResource("11_imku0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.354366, 0.00050136447, -10.665295)
+
+[node name="Root Scene7" parent="." unique_id=1611956117 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.928276, 0.62306666, -15.3379)
+
+[node name="Root Scene8" parent="." unique_id=75182485 instance=ExtResource("8_jsk3o")]
+transform = Transform3D(5.075, 0, 0, 0, 5.075, 0, 0, 0, 5.075, 60.200645, 0.8136865, 1.0359645)
+
+[node name="patroliPath" type="Path3D" parent="." unique_id=2100548738]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 16.479033, 0.29179087, -14.122694)
+curve = SubResource("Curve3D_wlxy5")
+
+[node name="PatrolFollow" type="PathFollow3D" parent="patroliPath" unique_id=1441204214]
+transform = Transform3D(0.9988974, 0, -0.046947535, 0, 1, 0, 0.046947535, 0, 0.9988974, -0.6019783, -0.41612983, -0.56391907)
+use_model_front = true
+loop = false
+script = ExtResource("14_wlxy5")
+
+[node name="NPCp" parent="patroliPath" unique_id=617519002 node_paths=PackedStringArray("markers_folder") instance=ExtResource("13_imku0")]
+script = ExtResource("15_tuemg")
+markers_folder = NodePath("../../wayoint3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="patroliPath/NPCp" unique_id=670743039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86083996, 0.18210983)
+shape = SubResource("CapsuleShape3D_uetg2")
+
+[node name="Root Scene" parent="patroliPath" unique_id=1800680289 instance=ExtResource("8_jsk3o")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13.452265, -0.41613, -8.509274)
+
+[node name="House" type="MeshInstance3D" parent="patroliPath" unique_id=1028198244]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 39.715126, -0.34322435, -12.746532)
+mesh = ExtResource("15_tcnuu")
+
+[node name="Root Scene2" parent="patroliPath" unique_id=1961421113 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1.4285715, 0, 0, 0, 1.4285715, 0, 0, 0, 1.4285715, -1.7958794, 0.47325057, 7.239173)
+
+[node name="Root Scene3" parent="patroliPath" unique_id=1537990783 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1.4285715, 0, 0, 0, 1.4285715, 0, 0, 0, 1.4285715, 34.115982, 0.47324973, 0.14823914)
+
+[node name="Root Scene4" parent="patroliPath" unique_id=636221016 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1.4285715, 0, 0, 0, 1.4285715, 0, 0, 0, 1.4285715, 14.298998, 0.47325176, 25.278502)
+
+[node name="Root Scene5" parent="patroliPath" unique_id=717997068 instance=ExtResource("8_jsk3o")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28.583208, 0.25108168, 55.29692)
+
+[node name="Root Scene9" parent="." unique_id=1571343899 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.26029, 0.6230662, 25.119648)
+
+[node name="Root Scene10" parent="." unique_id=342531803 instance=ExtResource("10_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.682938, 0.62306595, 23.554466)
+
+[node name="wayoint" type="Marker3D" parent="." unique_id=62682680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.06489, 0, -14.549644)
+
+[node name="wayoint2" type="Marker3D" parent="." unique_id=1164691368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.164005, 0.2733337, -14.549644)
+
+[node name="wayoint3" type="Marker3D" parent="." unique_id=963977075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.164005, 3.0297122, 11.486252)

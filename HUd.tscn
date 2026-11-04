@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c7p81d4qeh010"]
+
+[ext_resource type="Script" uid="uid://don5vdk1o8qjh" path="res://HUd.gd" id="1_hk5oy"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1708330739]
+script = ExtResource("1_hk5oy")
+
+[node name="Control" type="Control" parent="." unique_id=1774941843]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1156.0
+offset_bottom = 641.0
+mouse_filter = 2
+
+[node name="HealthBar" type="Label" parent="Control" unique_id=422743146]
+light_mask = 2
+layout_mode = 0
+offset_left = 1017.0
+offset_top = 6.0
+offset_right = 1141.0
+offset_bottom = 76.0
+text = "JAM"
+
+[node name="ScoreLabel" type="ProgressBar" parent="Control" unique_id=2118771464]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 53.0
+mouse_filter = 2

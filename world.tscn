@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://kw8ovq1qk74x"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_rmq45"]
+
+[sub_resource type="Sky" id="Sky_mr7ve"]
+sky_material = SubResource("PhysicalSkyMaterial_rmq45")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_02vb5"]
+background_mode = 2
+background_energy_multiplier = 2.32
+sky = SubResource("Sky_mr7ve")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2h6t2"]
+size = Vector3(3000, 0.1, 3000)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2h6t2"]
+lightmap_size_hint = Vector2i(30004, 15016)
+flip_faces = true
+size = Vector3(3000, 1, 3000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02vb5"]
+albedo_color = Color(0.3254902, 1, 0.48235294, 1)
+emission_enabled = true
+
+[node name="world" type="Node3D" unique_id=1678593180]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=932660267]
+environment = SubResource("Environment_02vb5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1453358437]
+transform = Transform3D(-0.8449044, -0.37789166, 0.37859592, 0.17768583, 0.4693082, 0.8649727, -0.50454396, 0.7980903, -0.32937446, 245.68523, 2675.5251, -1668.914)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1856364167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.735581, 1.8116965, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D" unique_id=97779738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8362293, 0)
+size = Vector3(0.5, 8.315, 30)
+
+[node name="Node3D" type="Node3D" parent="Node3D" unique_id=964098806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.455914, 0, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Node3D" unique_id=253521930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.455914, 3.8362293, 0)
+size = Vector3(0.5, 8.315, 30)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1317565018]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1358790691]
+shape = SubResource("BoxShape3D_2h6t2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1386765127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.940994, -11.493286, -78.45032)
+mesh = SubResource("BoxMesh_2h6t2")
+surface_material_override/0 = SubResource("StandardMaterial3D_02vb5")

@@ -1,0 +1,15 @@
+[
+  {
+	"name": "Pak Guru",
+	"text": "Halo [PLAYER], selamat datang di kelas PPLG!"
+  },
+  {
+	"name": "Pak Guru",
+	"text": "Sebelum kita mulai pelajaran, siapa nama lengkap kamu?",
+	"ask_name": true
+  },
+  {
+	"name": "Pak Guru",
+	"text": "Ooh salam kenal ya, [PLAYER]. Sekarang duduk di bangku kamu!"
+  }
+]

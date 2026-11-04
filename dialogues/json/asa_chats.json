@@ -1,0 +1,13 @@
+[
+	{"name": "???", "text": "."},
+	{"name": "???", "text": ".."},
+	{"name": "???", "text": "..."},
+	{"name": "???", "text": "!"},
+	{"name": "???", "text": "Halooo!!"},
+	{"name": "???", "text": "Kamu pasti anak baru ya di sekolah Doesat!"},
+	{"name": "???", "text": "Aku juga anak baru tau"},
+	{"name": "???", "text": "Perkenal kan aku asa!"},
+	{"name": "Asa", "text": "kalo kamu siapa?", "ask_name": true},
+	{"name": "Asa", "text": "Waahhh nama yang bagus, [PLAYER]!"},
+	{"name": "Asa", "text": "Senang berkenalan dengan mu."}
+]
