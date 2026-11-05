@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://ciu8mhgetf0b3"]
 
 [ext_resource type="Texture2D" uid="uid://bjbh4chiwdgsq" path="res://img/chr.png" id="1_3yiyw"]
+[ext_resource type="Script" uid="uid://d23ng4bds8awr" path="res://DialoguePlayer.gd" id="1_820ck"]
 [ext_resource type="Texture2D" uid="uid://c4wmljmbh8ccd" path="res://img/dialogue.png" id="2_820ck"]
 [ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="3_fxm2p"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=120024547]
+script = ExtResource("1_820ck")
+d_file = "res://dialogues/json/nela.json"
 
 [node name="PngPlayer" type="TextureRect" parent="." unique_id=1585703997]
 anchors_preset = -1

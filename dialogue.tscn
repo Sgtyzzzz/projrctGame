@@ -17,6 +17,7 @@ offset_bottom = 802.0
 pivot_offset = Vector2(255, 1000)
 texture = ExtResource("2_hoxo3")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=150473811]
 offset_left = -2.0
