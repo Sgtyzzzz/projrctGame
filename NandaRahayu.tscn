@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://436scu3q8u25"]
+
+[ext_resource type="Texture2D" uid="uid://fii5qfru2lud" path="res://img/fcf.png" id="1_sa8qn"]
+[ext_resource type="Texture2D" uid="uid://c4wmljmbh8ccd" path="res://img/dialogue.png" id="2_yal4d"]
+[ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="3_awwht"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1948277942]
+
+[node name="PngPlayer" type="TextureRect" parent="." unique_id=2117605630]
+anchors_preset = -1
+anchor_left = -0.28645834
+anchor_top = -0.11111111
+anchor_right = -0.38368055
+anchor_bottom = -0.5925926
+offset_left = 1057.0
+offset_top = 160.0
+offset_right = 1509.0
+offset_bottom = 932.0
+pivot_offset = Vector2(255, 1000)
+texture = ExtResource("1_sa8qn")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=908277626]
+offset_left = -2.0
+offset_top = 139.0
+offset_right = 1152.0
+offset_bottom = 791.0
+pivot_offset = Vector2(560, 550)
+texture = ExtResource("2_yal4d")
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=469076158]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 307.0
+offset_right = 343.0
+offset_bottom = 353.0
+theme_override_colors/default_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+theme_override_fonts/normal_font = ExtResource("3_awwht")
+theme_override_font_sizes/normal_font_size = 31
+text = "name"
+metadata/_edit_use_anchors_ = true
+
+[node name="Chat" type="RichTextLabel" parent="NinePatchRect" unique_id=559828811]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 344.0
+offset_right = 1029.0
+offset_bottom = 446.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_awwht")
+theme_override_font_sizes/normal_font_size = 26
+text = "Chatting..."
+metadata/_edit_use_anchors_ = true
+
+[node name="NameInput" type="LineEdit" parent="NinePatchRect" unique_id=1211609352]
+visible = false
+layout_mode = 0
+offset_left = 462.0
+offset_top = 375.0
+offset_right = 695.0
+offset_bottom = 437.0
+theme_override_font_sizes/font_size = 20
+text = "Nama"
+alignment = 1
+max_length = 13
+
+[node name="Timer" type="Timer" parent="." unique_id=1434239916]
