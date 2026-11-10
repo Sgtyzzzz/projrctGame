@@ -1,0 +1,348 @@
+[gd_scene format=3 uid="uid://cduq7eyms2ndi"]
+
+[ext_resource type="Script" uid="uid://d0qxmpxcd1td6" path="res://quest_ui.gd" id="1_quest"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_paper"]
+bg_color = Color(0.92, 0.96, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.18, 0.45, 0.85, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.18)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card_bg"]
+bg_color = Color(0.94, 0.97, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.15, 0.42, 0.82, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blue_btn"]
+bg_color = Color(0.16, 0.46, 0.88, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_badge_bg"]
+bg_color = Color(0.84, 0.91, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.74, 0.96, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_item_card"]
+bg_color = Color(1, 1, 1, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.76, 0.86, 0.98, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_bg"]
+bg_color = Color(0.86, 0.91, 0.97, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_blue"]
+bg_color = Color(0.18, 0.52, 0.95, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_sky"]
+bg_color = Color(0.25, 0.72, 0.92, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_claim_btn"]
+bg_color = Color(0.12, 0.4, 0.82, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="QuestUI" type="CanvasLayer" unique_id=118066418]
+script = ExtResource("1_quest")
+
+[node name="QuestToggleButton" type="Button" parent="." unique_id=98002501]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 92.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.1, 0.25, 0.5, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_paper")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_paper")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_paper")
+text = "📄"
+
+[node name="QuestPanel" type="Control" parent="." unique_id=2098964031]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimBackground" type="ColorRect" parent="QuestPanel" unique_id=1057523292]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.1, 0.2, 0.55)
+
+[node name="MainCard" type="PanelContainer" parent="QuestPanel" unique_id=186623839]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -275.0
+offset_right = 310.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card_bg")
+
+[node name="Margin" type="MarginContainer" parent="QuestPanel/MainCard" unique_id=585735479]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="QuestPanel/MainCard/Margin" unique_id=2010758000]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Header" type="HBoxContainer" parent="QuestPanel/MainCard/Margin/VBox" unique_id=493578317]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="QuestPanel/MainCard/Margin/VBox/Header" unique_id=1032510436]
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_blue_btn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_blue_btn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_blue_btn")
+text = "✕"
+
+[node name="TitleBox" type="VBoxContainer" parent="QuestPanel/MainCard/Margin/VBox/Header" unique_id=1226006676]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Title" type="Label" parent="QuestPanel/MainCard/Margin/VBox/Header/TitleBox" unique_id=980041062]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09, 0.22, 0.45, 1)
+theme_override_font_sizes/font_size = 30
+text = "Daftar Tugas"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="QuestPanel/MainCard/Margin/VBox/Header/TitleBox" unique_id=1569198529]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22, 0.48, 0.85, 1)
+theme_override_font_sizes/font_size = 15
+text = "Misi Sekolah Hari Ini"
+horizontal_alignment = 1
+
+[node name="SchoolBadge" type="PanelContainer" parent="QuestPanel/MainCard/Margin/VBox/Header" unique_id=2037103518]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_badge_bg")
+
+[node name="BadgeMargin" type="MarginContainer" parent="QuestPanel/MainCard/Margin/VBox/Header/SchoolBadge" unique_id=274972987]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="BadgeLabel" type="Label" parent="QuestPanel/MainCard/Margin/VBox/Header/SchoolBadge/BadgeMargin" unique_id=690855232]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.28, 0.58, 1)
+theme_override_font_sizes/font_size = 15
+text = " 1/3 Selesai"
+
+[node name="QuestList" type="VBoxContainer" parent="QuestPanel/MainCard/Margin/VBox" unique_id=833150163]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="Quest1" type="PanelContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList" unique_id=1459116941]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_item_card")
+
+[node name="Margin" type="MarginContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest1" unique_id=2065025826]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="HBox" type="HBoxContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest1/Margin" unique_id=2061537129]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Info" type="VBoxContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest1/Margin/HBox" unique_id=1544290453]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest1/Margin/HBox/Info" unique_id=2070826010]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.22, 0.42, 1)
+theme_override_font_sizes/font_size = 18
+text = "Bantu Guru Pindahkan Berkas"
+
+[node name="Sub" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest1/Margin/HBox/Info" unique_id=215410322]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.38, 0.48, 0.62, 1)
+theme_override_font_sizes/font_size = 13
+text = "Antar tumpukan berkas ke Ruang Guru (1/1)"
+
+[node name="Bar" type="ProgressBar" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest1/Margin/HBox/Info" unique_id=252571148]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bar_blue")
+max_value = 1.0
+value = 1.0
+show_percentage = false
+
+[node name="Reward" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest1/Margin/HBox" unique_id=1372025805]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.28, 0.58, 1)
+theme_override_font_sizes/font_size = 17
+text = "⭐ 50  "
+
+[node name="Quest2" type="PanelContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList" unique_id=1701853795]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_item_card")
+
+[node name="Margin" type="MarginContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest2" unique_id=1274293893]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="HBox" type="HBoxContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest2/Margin" unique_id=1853127350]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Info" type="VBoxContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest2/Margin/HBox" unique_id=2048198333]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest2/Margin/HBox/Info" unique_id=1473087450]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.22, 0.42, 1)
+theme_override_font_sizes/font_size = 18
+text = "Jawab 5 Soal dari Guru"
+
+[node name="Sub" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest2/Margin/HBox/Info" unique_id=802826007]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.38, 0.48, 0.62, 1)
+theme_override_font_sizes/font_size = 13
+text = "Selesaikan kuis di papan tulis (3/5)"
+
+[node name="Bar" type="ProgressBar" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest2/Margin/HBox/Info" unique_id=1558393529]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bar_sky")
+max_value = 5.0
+value = 3.0
+show_percentage = false
+
+[node name="Reward" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest2/Margin/HBox" unique_id=1885514583]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.28, 0.58, 1)
+theme_override_font_sizes/font_size = 17
+text = "⭐ 100"
+
+[node name="Quest3" type="PanelContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList" unique_id=1568371729]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_item_card")
+
+[node name="Margin" type="MarginContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest3" unique_id=259550649]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="HBox" type="HBoxContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest3/Margin" unique_id=1930760046]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Info" type="VBoxContainer" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest3/Margin/HBox" unique_id=190061561]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest3/Margin/HBox/Info" unique_id=1036553030]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.22, 0.42, 1)
+theme_override_font_sizes/font_size = 18
+text = "Kerjakan Tugas Matematika"
+
+[node name="Sub" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest3/Margin/HBox/Info" unique_id=1383134281]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.38, 0.48, 0.62, 1)
+theme_override_font_sizes/font_size = 13
+text = "Kumpulkan buku tugas di meja kelas (0/1)"
+
+[node name="Bar" type="ProgressBar" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest3/Margin/HBox/Info" unique_id=549531087]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bar_blue")
+max_value = 1.0
+show_percentage = false
+
+[node name="Reward" type="Label" parent="QuestPanel/MainCard/Margin/VBox/QuestList/Quest3/Margin/HBox" unique_id=123175141]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.28, 0.58, 1)
+theme_override_font_sizes/font_size = 17
+text = "⭐ 75"
+
+[node name="ClaimButton" type="Button" parent="QuestPanel/MainCard/Margin/VBox" unique_id=860609263]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_claim_btn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_claim_btn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_claim_btn")
+text = "KLAIM HADIAH"

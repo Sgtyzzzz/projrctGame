@@ -3,7 +3,6 @@ extends Node2D
 @onready var button_manager: Control = find_child("button manager", true, false) as Control
 @onready var music_player: AudioStreamPlayer = find_child("MusicPlayer", true, false) as AudioStreamPlayer
 
-# Pastikan nama file di bawah ini SAMA PERSIS dengan yang ada di panel FileSystem
 var click_sfx: AudioStream = preload("res://sound/Click Sound Effect.wav")
 
 func _ready() -> void:
@@ -20,11 +19,11 @@ func _on_button_pressed(button_name: String) -> void:
 
 	match button_name.to_lower():
 		"start":
-			get_tree().change_scene_to_file("res://game.tscn")
+			get_tree().change_scene_to_file("res://intro_cutscene.tscn")
 		"options":
 			get_tree().change_scene_to_file("res://options.tscn")
 		"credit":
-			get_tree().change_scene_to_file("res://credit.tscn")
+			get_tree().change_scene_to_file("res://credits.tscn")
 		"back":
 			get_tree().change_scene_to_file("res://main_menu.tscn")
 		"quit":
@@ -35,8 +34,5 @@ func _play_click_sound() -> void:
 		var temp_player = AudioStreamPlayer.new()
 		temp_player.stream = click_sfx
 		get_tree().root.add_child(temp_player)
-		
-		# Memutar dari titik 2.29 detik
 		temp_player.play(2.29)
-		
 		temp_player.finished.connect(temp_player.queue_free)

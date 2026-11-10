@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://bmvry1risma3u"]
+
+[ext_resource type="Script" uid="uid://d1v2ihwv6hvka" path="res://pause_menu.gd" id="1_pause"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icon_normal"]
+bg_color = Color(0.08, 0.08, 0.1, 0.65)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.25)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icon_hover"]
+bg_color = Color(0.18, 0.18, 0.22, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.6)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_normal"]
+
+[sub_resource type="Gradient" id="Gradient_hover"]
+offsets = PackedFloat32Array(0, 0.25, 0.5, 0.75, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.35, 0.35, 0.38, 0.7, 0.5, 0.5, 0.55, 0.9, 0.35, 0.35, 0.38, 0.7, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hover"]
+gradient = SubResource("Gradient_hover")
+width = 320
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hover"]
+texture = SubResource("GradientTexture1D_hover")
+
+[node name="PauseMenuLayer" type="CanvasLayer" unique_id=810484822]
+process_mode = 3
+script = ExtResource("1_pause")
+
+[node name="PauseIconButton" type="Button" parent="." unique_id=875878434]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 18.0
+offset_right = 26.0
+offset_bottom = 66.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_icon_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_icon_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_icon_hover")
+text = "||"
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1821756362]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1550915103]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=1039768302]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 180.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Resume" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1044224067]
+custom_minimum_size = Vector2(360, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hover")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hover")
+theme_override_styles/focus = SubResource("StyleBoxTexture_hover")
+text = "RESUME GAME"
+
+[node name="Settings" type="Button" parent="PauseMenu/VBoxContainer" unique_id=2125084843]
+custom_minimum_size = Vector2(360, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hover")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hover")
+theme_override_styles/focus = SubResource("StyleBoxTexture_hover")
+text = "SETTINGS"
+
+[node name="SaveQuit" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1352664871]
+custom_minimum_size = Vector2(360, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hover")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hover")
+theme_override_styles/focus = SubResource("StyleBoxTexture_hover")
+text = "SAVE & QUIT"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/SaveQuit" to="." method="_on_save_quit_pressed"]

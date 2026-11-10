@@ -1,0 +1,454 @@
+[gd_scene format=3 uid="uid://7opotv341v0p"]
+
+[ext_resource type="Script" uid="uid://cvwln3xoi8f5r" path="res://credits.gd" id="1_credits"]
+[ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="2_c1t8d"]
+
+[node name="Credits" type="Control" unique_id=1623172720]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_credits")
+
+[node name="Background" type="ColorRect" parent="." unique_id=642881839]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1772670319]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=385192434]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="TopSpacer" type="Control" parent="ScrollContainer/VBoxContainer" unique_id=1215945903]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="Section_0" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1499471511]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2909765, 0.956183, 0.99988586, 1)
+theme_override_fonts/font = ExtResource("2_c1t8d")
+theme_override_font_sizes/font_size = 32
+text = "A2SO PRESENTS"
+horizontal_alignment = 1
+
+[node name="Row_0_0" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1538349265]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_0_0" unique_id=1255060289]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "A Game by"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_0_0" unique_id=1469229121]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "A2SO"
+
+[node name="Row_0_1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=399698410]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_0_1" unique_id=539948803]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Game Director / Project Lead"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_0_1" unique_id=622498329]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Putra Sigit Nurteja"
+
+[node name="Row_0_2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=763175089]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_0_2" unique_id=1715140781]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Producer / Project Manager"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_0_2" unique_id=2072008360]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Putra Sigit Nurteja"
+
+[node name="Section_1" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1173045615]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "GAME DESIGN & STORY"
+horizontal_alignment = 1
+
+[node name="Row_1_0" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=2017819484]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_1_0" unique_id=35798211]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Game Designer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_1_0" unique_id=820630388]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ainun Sekar Arum"
+
+[node name="Row_1_1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1795405774]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_1_1" unique_id=1694161806]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Level Designer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_1_1" unique_id=307475475]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Aidan Abdilah Yusuf"
+
+[node name="Row_1_2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1254343991]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_1_2" unique_id=205025819]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Story / Narrative Writer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_1_2" unique_id=423388926]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Putra Sigit Nurteja"
+
+[node name="Section_2" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1229554327]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "PROGRAMMING"
+horizontal_alignment = 1
+
+[node name="Row_2_0" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=446341126]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_2_0" unique_id=659163194]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Lead Programmer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_2_0" unique_id=802655126]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Putra Sigit Nurteja"
+
+[node name="Row_2_1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1163222917]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_2_1" unique_id=1895739275]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Gameplay Programmer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_2_1" unique_id=291820601]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Aidan Abdilah Yusuf"
+
+[node name="Row_2_2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1726404024]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_2_2" unique_id=2101346250]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "UI / System Programmer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_2_2" unique_id=1522202268]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ainun Sekar Arum"
+
+[node name="Section_3" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=128264880]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "ART & VISUALS"
+horizontal_alignment = 1
+
+[node name="Row_3_0" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=817226509]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_0" unique_id=1272065081]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Art Director / Lead Artist"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_0" unique_id=1370826457]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ainun Sekar Arum"
+
+[node name="Row_3_1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1947684503]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_1" unique_id=1562241860]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Character & Environment Artist"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_1" unique_id=974339835]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ainun Sekar Arum"
+
+[node name="Row_3_2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=166724049]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_2" unique_id=1055805545]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Animator"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_2" unique_id=450590699]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ainun Sekar Arum"
+
+[node name="Row_3_3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1681101987]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_3" unique_id=68858455]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "UI/UX Designer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_3_3" unique_id=1422887100]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ainun Sekar Arum"
+
+[node name="Section_4" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=471694173]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "AUDIO"
+horizontal_alignment = 1
+
+[node name="Row_4_0" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1843549759]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_4_0" unique_id=19978072]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Music Composer"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_4_0" unique_id=330288172]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Pixabay"
+
+[node name="Row_4_1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1464370212]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_4_1" unique_id=117257194]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Sound Designer (SFX)"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_4_1" unique_id=1908394595]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Pixabay"
+
+[node name="Section_5" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1473984785]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "QUALITY ASSURANCE (QA)"
+horizontal_alignment = 1
+
+[node name="Row_5_0" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1000797127]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_5_0" unique_id=1642763334]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Playtesters"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_5_0" unique_id=994543101]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Aidan Abdilah Yusuf"
+
+[node name="Section_6" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1663240866]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "TOOLS, ASSETS & SPECIAL THANKS"
+horizontal_alignment = 1
+
+[node name="Row_6_0" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=381051639]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_0" unique_id=1363475423]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Game Engine"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_0" unique_id=380705564]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Powered by Godot"
+
+[node name="Row_6_1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1253984311]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_1" unique_id=1538930585]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "External Assets"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_1" unique_id=2008691392]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Pixabay.com"
+
+[node name="Row_6_2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=195975377]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_2" unique_id=2005856961]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Special Thanks"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_2" unique_id=988628243]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Maulana Syahwi Ibrahim (Guru Pembimbing)"
+
+[node name="Row_6_3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=706546461]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Role" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_3" unique_id=1116394500]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Copyright"
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Row_6_3" unique_id=2048710218]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "© 2026 A2SO. All Rights Reserved."
+
+[node name="BottomSpacer" type="Control" parent="ScrollContainer/VBoxContainer" unique_id=86886849]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
