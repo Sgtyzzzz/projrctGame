@@ -1,6 +1,6 @@
 extends Node2D
 
-# Memanggil node tombol back berdasarkan hierarchy di gambar
+# Memanggil node tombol back berdasarkan hierarchy di scene game.tscn
 @onready var back_button: Button = $Control/back
 
 # Memanggil node Dialogue yang ada di dalam IntroSetup
@@ -11,7 +11,7 @@ func _ready() -> void:
 	if back_button:
 		back_button.pressed.connect(_on_back_pressed)
 	
-	# 2. Jalankan dialog otomatis saat scene game dimuat
+	# 2. Jalankan dialog otomatis saat scene game dimuat (sesi Asa tanya nama)
 	if dialogue:
 		dialogue.start()
 

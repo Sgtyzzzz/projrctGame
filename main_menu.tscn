@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cy3eu8wanhqfs" path="res://img/BC.png" id="2_7vrkn"]
 [ext_resource type="FontFile" uid="uid://pobfvu4qjnor" path="res://font/PixelifySans-VariableFont_wght.ttf" id="3_jix8l"]
 [ext_resource type="Texture2D" uid="uid://c63yjjuhspuw6" path="res://img/ButtonBC.png" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://bkmwtm7k72ner" path="res://img/Tak berjudul40_20261111070522.png" id="5_glbon"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe12f"]
 texture = ExtResource("4_glbon")
@@ -23,8 +24,8 @@ texture = SubResource("CompressedTexture2D_nlkkf")
 expand_margin_top = 20.0
 expand_margin_bottom = 20.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjhsf"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2eq7"]
+texture = ExtResource("5_glbon")
 
 [node name="Main menu" type="Node2D" unique_id=53736685]
 script = ExtResource("1_06t4h")
@@ -92,15 +93,14 @@ text = "Quit"
 
 [node name="Credit" type="Button" parent="button manager" unique_id=2100498676]
 layout_mode = 0
-offset_left = 964.0
+offset_left = 1074.0
 offset_top = 596.0
 offset_right = 1141.0
 offset_bottom = 651.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_jix8l")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_hjhsf")
-text = "Credit"
+theme_override_styles/normal = SubResource("StyleBoxTexture_w2eq7")
 
 [connection signal="pressed" from="button manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="button manager/Start2" to="." method="_on_start_pressed"]
